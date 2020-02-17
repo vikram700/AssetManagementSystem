@@ -1,0 +1,39 @@
+@model GenericViewModel<Book>
+
+
+<!-- link the style sheet -->
+<link rel="stylesheet" href="~/css/Book/book.css">
+
+<!-- main content -->
+<div class="container">
+    <div class="jumbotron">
+        <div class="upperContainer">
+            <form asp-controller="Book" asp-action="Details" method="GET">
+                <input class="form-control" type="text" name = "bookName" placeholder="Search Books" aria-label="Search" required>
+            </form>
+            <a class="btn btn-primary btn-lg add-button" asp-controller="Book" asp-action="AddNewBook" >Add New Book</a>
+        </div>
+        
+        <hr>
+        
+
+        <div class="row">
+            @foreach (var book in @Model.AssetType)
+            {
+                <div class="book col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumbnail">
+                        <img src = "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                        <h5>@book.BookTitle</h5>
+                        <p>Price : $@book.AssetPrice</p>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a class="btn btn-primary" asp-controller="Book" asp-action="UpdateBook" asp-route-Id="@book.AssetId" >Update</a>
+                            <form asp-controller="Book" asp-action="Delete" asp-route-id="@book.AssetId" method="POST">
+                                <button type="submit" class="btn btn-primary">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

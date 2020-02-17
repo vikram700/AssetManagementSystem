@@ -1,0 +1,41 @@
+@model Printer
+
+<link rel="stylesheet" href="~/css/Printer/AddNewPrinter.css">
+
+<div class="container">
+    <div class="jumbotron">
+        <form class="form" asp-controller="Printer" asp-action="AddNewPrinter" method="POST">
+            <div class="form-group">
+                <label asp-for="PrinterName">Printer Name</label>
+                <input type="text" class="form-control" asp-for="PrinterName" placeholder="Enter Printer Name" >
+                <span asp-validation-for="PrinterName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CompanyName" >Laptop Company Name</label>
+                <input type="text" class="form-control" asp-for="CompanyName" placeholder="Printer Company Name" >
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AssetPrice" >Printer Price $</label>
+                <input class="form-control" asp-for="AssetPrice" placeholder="Price" >
+                <span asp-validation-for="AssetPrice" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PrinterQuality" >Printer Quality</label>
+                <input class="form-control" asp-for="PrinterQuality" placeholder="Enter Printer Quality from Low, Medium or High" >
+                <span asp-validation-for="PrinterQuality" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PrinterType" >Printer Type</label>
+                <input class="form-control" asp-for="PrinterType" placeholder="Enter Type Color or Black" >
+                <span asp-validation-for="PrinterType" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>

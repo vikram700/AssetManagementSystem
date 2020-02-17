@@ -1,0 +1,47 @@
+@model Laptop
+
+<link rel="stylesheet" href="~/css/Laptop/UpdateLaptop.css">
+
+<div class="container">
+    <div class="jumbotron">
+        <form class="form" asp-controller="Laptop" asp-action="UpdateLaptop" asp-route-id="@Model.AssetId" method="POST">
+            <div class="form-group">
+                <label asp-for="LaptopName" >Laptop Name:</label>
+                <input type="text" class="form-control" asp-for="LaptopName" value="@Model.LaptopName"  placeholder="Enter Laptop Name" >
+                <span asp-validation-for="LaptopName"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CompanyName" >Laptop Company</label>
+                <input type="text" class="form-control" asp-for="CompanyName" value="@Model.CompanyName"  placeholder="Hardware Company Name" >
+                <span asp-validation-for="CompanyName"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AssetPrice">Laptop Price $:</label>
+                <input class="form-control" asp-for="AssetPrice" value="@Model.AssetPrice" placeholder="Price" >
+                <span asp-validation-for="AssetPrice"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SerialNumber">Serial Number</label>
+                <input class="form-control" asp-for="SerialNumber" value="@Model.SerialNumber" placeholder="Serial Number" >
+                <span asp-validation-for="SerialNumber"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="OperatingSystem">Laptop Operating System</label>
+                <input class="form-control" asp-for="OperatingSystem" value="@Model.OperatingSystem" placeholder="Enter Operating System Name " >
+                <span asp-validation-for="OperatingSystem"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="WarrantyPeriod">Warranty Period:</label>
+                <input class="form-control" asp-for="WarrantyPeriod" value="@Model.WarrantyPeriod" placeholder="Warranty Period" >
+                <span asp-validation-for="WarrantyPeriod"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>

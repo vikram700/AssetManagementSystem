@@ -1,0 +1,46 @@
+@model Laptop
+
+<link rel="stylesheet" href="~/css/Laptop/AddNewLaptop.css">
+
+<div class="container">
+    <div class="jumbotron">
+        <form class="form" asp-controller="Laptop" asp-action="AddNewLaptop" method="POST">
+            <div class="form-group">
+                <label asp-for="LaptopName">Laptop Name</label>
+                <input type="text" class="form-control" asp-for="LaptopName" placeholder="Enter Laptop Name" >
+                <span asp-validation-for="LaptopName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CompanyName" >Laptop Company Name</label>
+                <input type="text" class="form-control" asp-for="CompanyName" placeholder="Laptop Company Name" >
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AssetPrice" >Laptop Price $</label>
+                <input class="form-control" asp-for="AssetPrice" placeholder="Price" >
+                <span asp-validation-for="AssetPrice" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SerialNumber" >Serial Number</label>
+                <input class="form-control" asp-for="SerialNumber" placeholder="Enter Serial number" >
+                <span asp-validation-for="SerialNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="OperatingSystem" >Operating System</label>
+                <input class="form-control" asp-for="OperatingSystem" placeholder="Enter Operating System" >
+                <span asp-validation-for="OperatingSystem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WarrantyPeriod" >Warranty Period</label>
+                <input class="form-control" asp-for="WarrantyPeriod" placeholder="Warranty Period" >
+                <span asp-validation-for="WarrantyPeriod" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>

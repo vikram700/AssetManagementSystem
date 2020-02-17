@@ -1,0 +1,39 @@
+@model GenericViewModel<Laptop>
+
+
+<!-- link the style sheet -->
+<link rel="stylesheet" href="~/css/Laptop/laptop.css">
+
+<!-- main content -->
+<div class="container">
+    <div class="jumbotron">
+        <div class="upperContainer">
+            <form asp-controller="Laptop" asp-action="Details" method="GET">
+                <input class="form-control" type="text" name = "laptopName" placeholder="Search laptops" aria-label="Search" required>
+            </form>
+            <a class="btn btn-primary btn-lg add-button" asp-controller="Laptop" asp-action="AddNewLaptop" >Add New Laptop</a>
+        </div>
+        
+        <hr>
+        
+
+        <div class="row">
+            @foreach (var laptop in @Model.AssetType)
+            {
+                <div class="laptop col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumbnail">
+                        <img src = "https://images.unsplash.com/photo-1495046370729-fa5e793723e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                        <h5>@laptop.LaptopName</h5>
+                        <p>Price : $@laptop.AssetPrice</p>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a class="btn btn-primary" asp-controller="Laptop" asp-action="UpdateLaptop" asp-route-Id="@laptop.AssetId" >Update</a>
+                            <form asp-controller="Laptop" asp-action="Delete" asp-route-id="@laptop.AssetId" method="POST">
+                                <button type="submit" class="btn btn-primary">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

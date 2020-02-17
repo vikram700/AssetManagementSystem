@@ -1,0 +1,18 @@
+﻿
+@* link the css *@
+<link rel="stylesheet" href="~/css/Home/home.css">
+
+@* The main page content *@
+<div class="container">
+    <div class="jumbotron">
+        <div class="bookAsset assets">
+            <a asp-controller="book" asp-action="details" class="btn btn-primary btn-lg button">Books</a>
+        </div>
+        <div class="softwareAsset assets">
+            <a asp-controller="software" asp-action="details" class="btn btn-primary btn-lg button">Softwares</a>
+        </div>
+        <div class="hardwareAsset assets">
+            <a asp-controller="hardware" asp-action="details" class="btn btn-primary btn-lg button">Hardwares</a>
+        </div>
+    </div>    
+</div>

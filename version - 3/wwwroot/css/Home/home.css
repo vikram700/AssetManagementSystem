@@ -1,0 +1,36 @@
+
+.assets{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 400px;
+    border-radius: 25px;
+}
+
+.bookAsset{
+    background-image: url("https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+
+.softwareAsset{
+    background-image: url("https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+.hardwareAsset{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTc5Dl3W6bUyn4pP4w0z9VODOrZrnwN0swi2-__McZCv0O-mylp");
+}
+
+.button{
+    margin-top : 200px;
+    border-radius: 15px;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+.jumbotron{
+    border-radius: 30px;
+}

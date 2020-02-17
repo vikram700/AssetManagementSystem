@@ -1,0 +1,41 @@
+@model Printer
+
+<link rel="stylesheet" href="~/css/Printer/UpdatePrinter.css">
+
+<div class="container">
+    <div class="jumbotron">
+        <form class="form" asp-controller="Printer" asp-action="UpdatePrinter" asp-route-id="@Model.AssetId" method="POST">
+            <div class="form-group">
+                <label asp-for="PrinterName" >Printer Name:</label>
+                <input type="text" class="form-control" asp-for="PrinterName" value="@Model.PrinterName"  placeholder="Enter Printer Name" >
+                <span asp-validation-for="PrinterName"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CompanyName" >Printer Company</label>
+                <input type="text" class="form-control" asp-for="CompanyName" value="@Model.CompanyName"  placeholder="Hardware Company Name" >
+                <span asp-validation-for="CompanyName"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AssetPrice">Laptop Price $:</label>
+                <input class="form-control" asp-for="AssetPrice" value="@Model.AssetPrice" placeholder="Price" >
+                <span asp-validation-for="AssetPrice"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PrinterType">Printer Type</label>
+                <input class="form-control" asp-for="PrinterType" value="@Model.PrinterType" placeholder="Printer Type" >
+                <span asp-validation-for="PrinterType"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PrinterQuality">Printer Quality</label>
+                <input class="form-control" asp-for="PrinterQuality" value="@Model.PrinterQuality" placeholder="Enter Printer Quality " >
+                <span asp-validation-for="PrinterQuality"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+@model Book
+
+<link rel="stylesheet" href="~/css/Book/UpdateBook.css">
+
+<div class="container">
+    <div class="jumbotron">
+        <form class="form" asp-controller="Book" asp-action="UpdateBook" asp-route-id="@Model.AssetId" method="POST">
+            <div class="form-group">
+                <label asp-for="BookTitle" >Book Name:</label>
+                <input type="text" class="form-control" asp-for="BookTitle" value="@Model.BookTitle"  placeholder="Enter Book Name" >
+                <span asp-validation-for="BookTitle"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BookAuthorName" >Book Author:</label>
+                <input type="text" class="form-control" asp-for="BookAuthorName" value="@Model.BookAuthorName"  placeholder="Author Name" >
+                <span asp-validation-for="BookAuthorName"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="BookPublisher" >Book Publisher:</label>
+                <input type="text" class="form-control" asp-for="BookPublisher" value="@Model.BookPublisher" placeholder="Book Publisher" >
+                <span asp-validation-for="BookPublisher"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AssetPrice">Book Price $:</label>
+                <input type="number" class="form-control" asp-for="AssetPrice" value="@Model.AssetPrice" placeholder="Price" min="1" step="any" >
+                <span asp-validation-for="AssetPrice"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BookPublishedYear" >Book Published Year:</label>
+                <input type="number" class="form-control" asp-for="BookPublishedYear" value="@Model.BookPublishedYear" placeholder="Published Year" >
+                <span asp-validation-for="BookPublishedYear"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>

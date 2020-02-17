@@ -1,0 +1,11 @@
+.form{
+    border: 2px solid #1d4c97;
+    text-align: center;
+    border-radius: 30px;
+}
+.form-group{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
